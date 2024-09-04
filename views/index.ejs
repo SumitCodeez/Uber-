@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore the Uber Platform | Earn & Ride | Uber</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <style>
+      :root {
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 240 5.9% 10%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 45%;
+        --accent: 240 4.8% 95.9%;
+        --accent-foreground: 240 5.9% 10%;
+        --destructive: 0 72% 51%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 5.9% 90%;
+        --input: 240 5.9% 90%;
+        --ring: 240 5.9% 10%;
+        --chart-1: 173 58% 39%;
+        --chart-2: 12 76% 61%;
+        --chart-3: 197 37% 24%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
+        --radius: 0.5rem;
+      }
+      img[src="/placeholder.svg"],
+      img[src="/placeholder-user.jpg"] {
+        filter: sepia(0.3) hue-rotate(-60deg) saturate(0.5) opacity(0.8);
+      }
+    </style>
+    <style>
+      @font-face {
+        font-family: "Regular";
+        src: url(/fonts/UberMove-Regular.ttf);
+      }
+      @font-face {
+        font-family: "Bold";
+        src: url(/fonts/UberMove-Bold.ttf);
+      }
+      @font-face {
+        font-family: "Medium";
+        src: url(/fonts/UberMoveText-Medium.ttf);
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Regular";
+        --font-sans-serif: "Regular";
+      }
+    </style>
+    <style>
+      body {
+        font-family: "Regular";
+        --font-sans-serif: "Regular";
+      }
+    </style>
+    <div class="min-h-screen bg-white">
+      <header class="flex items-center justify-between p-6 border-b">
+        <div class="flex items-center space-x-4">
+          <h1 class="text-2xl font-bold">Uber</h1>
+          <nav class="flex space-x-4">
+            <a class="text-lg font-medium font-[Medium]" href="#" rel="ugc">
+              Ride
+            </a>
+            <a class="text-lg font-medium font-[Medium]" href="#" rel="ugc">
+              Drive
+            </a>
+            <a class="text-lg font-medium font-[Medium]" href="#" rel="ugc">
+              Business
+            </a>
+            <a class="text-lg font-medium font-[Medium]" href="#" rel="ugc">
+              About <i class="ri-arrow-drop-down-line"></i>
+            </a>
+          </nav>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a class="text-lg font-medium font-[Medium]" href="#" rel="ugc"
+            ><i class="ri-global-line"></i> EN
+          </a>
+          <a class="text-lg font-medium font-[Medium]" href="#" rel="ugc">
+            Help
+          </a>
+          <div class="flex items-center space-x-0 bg-black rounded-full">
+            <span
+              class="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full"
+            >
+              <img
+                class="aspect-square h-full w-full"
+                alt="User"
+                src="/images/favicon.png"
+              />
+            </span>
+            <span class="text-lg font-medium text-white">sumit</span>
+            <span class="text-white text-2xl"
+              ><i class="ri-arrow-drop-down-line"></i
+            ></span>
+          </div>
+        </div>
+      </header>
+      <main class="flex flex-col items-center p-8 space-y-8">
+        <div class="flex justify-around items-center space-y-4">
+          <div class="flex flex-col space-y-4">
+            <h2 class="text-5xl font-bold font-[Bold]">Request a ride</h2>
+            <div class="relative mb-5">
+              <span
+                class="absolute left-4 top-1/2 transform -translate-y-1/2 text-black text-xl"
+              >
+                <i class="fas fa-dot-circle"></i>
+              </span>
+              <input
+                type="text"
+                placeholder="Enter location"
+                class="w-full py-4 pl-12 pr-14 text-lg rounded-lg bg-gray-100 text-gray-600 focus:outline-none"
+              />
+              <span
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 text-black text-xl"
+              >
+                <i class="fas fa-location-arrow"></i>
+              </span>
+            </div>
+
+            <div class="relative mb-5">
+              <span
+                class="absolute left-4 top-1/2 transform -translate-y-1/2 text-black text-xl"
+              >
+                <i class="fas fa-square"></i>
+              </span>
+              <input
+                type="text"
+                placeholder="Enter destination"
+                class="w-full py-4 pl-12 pr-4 text-lg rounded-lg bg-gray-100 text-gray-600 focus:outline-none"
+              />
+            </div>
+
+            <button
+              class="bg-black text-white py-4 w-[40%] text-lg rounded-lg hover:bg-gray-800"
+            >
+              See prices
+            </button>
+          </div>
+          <div class="w-1/3 h-full">
+            <img
+              src="/images/hero image.jpg"
+              alt="Ride illustration"
+              class="w-full h-full rounded-lg"
+              width="600"
+              height="300"
+              style="aspect-ratio: 600/300; object-fit: cover"
+            />
+          </div>
+        </div>
+      </main>
+      <section class="w-full p-8">
+        <h3 class="text-3xl font-bold">Recent activity</h3>
+        <div class="flex space-x-4 mt-4">
+          <div class="flex-1 p-4 border rounded-lg">
+            <h4 class="text-xl font-bold">Most recent</h4>
+            <img
+              src="/images/map.jpeg"
+              alt="Map"
+              class="w-[90%] mt-2 rounded-lg bg-contain"
+              width="300"
+              height="200"
+              style="aspect-ratio: 300/200; object-fit: cover"
+            />
+            <div class="flex gap-52 mt-6 items-center">
+              <div class="flex items-center space-x-2">
+                <div>
+                  <div class="text-lg font-bold text-black">
+                    Playotel Inn Aria
+                  </div>
+                  <div class="text-md text-gray-500">Aug 14 · 5:15 PM</div>
+                  <div class="text-md text-gray-500">₹133.00</div>
+                </div>
+              </div>
+              <button
+                class="px-4 py-2 text-sm font-bold text-black bg-[#DDDDDD] rounded-full hover:bg-gray-300"
+              >
+                See details
+              </button>
+            </div>
+          </div>
+          <div class="flex-1 p-4 border rounded-lg">
+            <h4 class="text-xl font-bold">Past</h4>
+            <div class="flex flex-col gap-6 mt-2">
+              <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                  <div>
+                    <img
+                      src="/images/UberGo.png"
+                      alt="Car"
+                      class="w-12 h-12 bg-[#DDDDDD] rounded-md"
+                    />
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-black">
+                      Playotel Inn Aria
+                    </div>
+                    <div class="text-xs text-gray-500">Aug 14 · 5:12 PM</div>
+                    <div class="text-xs text-gray-500">₹0.00 · Canceled</div>
+                  </div>
+                </div>
+                <button
+                  class="px-4 py-2 text-sm font-bold text-black bg-[#DDDDDD] rounded-full hover:bg-gray-300"
+                >
+                  See details
+                </button>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                  <div>
+                    <img
+                      src="/images/UberGo.png"
+                      alt="Car"
+                      class="w-12 h-12 bg-[#DDDDDD] rounded-md"
+                    />
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-black">DB City</div>
+                    <div class="text-xs text-gray-500">Apr 25 · 8:02 PM</div>
+                    <div class="text-xs text-gray-500">₹0.00 · Canceled</div>
+                  </div>
+                </div>
+                <button
+                  class="px-4 py-2 text-sm font-bold text-black bg-[#DDDDDD] rounded-full hover:bg-gray-300"
+                >
+                  See details
+                </button>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                  <div>
+                    <img
+                      src="/images/UberGo.png"
+                      alt="Car"
+                      class="w-12 h-12 bg-[#DDDDDD] rounded-md"
+                    />
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-black">Unnamed Road</div>
+                    <div class="text-xs text-gray-500">Feb 18 · 12:15 PM</div>
+                    <div class="text-xs text-gray-500">₹0.00 · Canceled</div>
+                  </div>
+                </div>
+                <button
+                  class="px-4 py-2 text-sm font-bold text-black bg-[#DDDDDD] rounded-full hover:bg-gray-300"
+                >
+                  See details
+                </button>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                  <div>
+                    <img
+                      src="/images/TukTuk_Green.png"
+                      alt="Auto Rickshaw"
+                      class="w-12 h-12 bg-[#DDDDDD] rounded-md"
+                    />
+                  </div>
+                  <div>
+                    <div class="text-sm font-bold text-black">Unnamed Road</div>
+                    <div class="text-xs text-gray-500">Feb 18 · 12:09 PM</div>
+                    <div class="text-xs text-gray-500">₹0.00 · Canceled</div>
+                  </div>
+                </div>
+                <button
+                  class="px-4 py-2 text-sm font-bold text-black bg-[#DDDDDD] rounded-full hover:bg-gray-300"
+                >
+                  See details
+                </button>
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <button
+                class="w-full px-4 py-2 text-md font-bold text-black bg-[#DDDDDD] rounded-full hover:bg-gray-200"
+              >
+                View all trips
+              </button>
+            </div>
+          </div>
+          <div class="flex-1 p-4 border rounded-lg">
+            <h4 class="text-xl font-bold">Suggestions</h4>
+            <div class="flex flex-col space-y-2 mt-2">
+              <div class="space-y-4">
+                <div class="flex items-center p-4 bg-gray-100 rounded-lg">
+                  <img
+                    src="/images/UberGo.png"
+                    alt="Ride"
+                    class="mr-4 w-20 h-20"
+                  />
+                  <div class="flex-1">
+                    <h3 class="font-bold text-lg">Ride</h3>
+                    <p class="text-gray-600 text-sm">
+                      Go anywhere with Uber. Request a ride, hop in, and go.
+                    </p>
+                  </div>
+                  <span class="text-gray-400">
+                    <i class="fas fa-chevron-right"></i>
+                  </span>
+                </div>
+                <div class="flex items-center p-4 bg-gray-100 rounded-lg">
+                  <img
+                    src="/images/clock.png"
+                    alt="Reserve"
+                    class="mr-4 w-20 h-20"
+                  />
+                  <div class="flex-1">
+                    <h3 class="font-bold text-lg">Reserve</h3>
+                    <p class="text-gray-600 text-sm">
+                      Reserve your ride in advance so you can relax on the day
+                      of your trip.
+                    </p>
+                  </div>
+                  <span class="text-gray-400">
+                    <i class="fas fa-chevron-right"></i>
+                  </span>
+                </div>
+                <div class="flex items-center p-4 bg-gray-100 rounded-lg">
+                  <img
+                    src="/images/package.png"
+                    alt="Package"
+                    class="mr-4 w-20 h-20"
+                  />
+                  <div class="flex-1">
+                    <h3 class="font-bold text-lg">Package</h3>
+                    <p class="text-gray-600 text-sm">
+                      Uber Connect makes same-day delivery easier than ever.
+                    </p>
+                  </div>
+                  <span class="text-gray-400">
+                    <i class="fas fa-chevron-right"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="flex justify-between items-center p-8 bg-white">
+        <div class="p-16 rounded-lg flex-1">
+          <div class="upperh1 pb-12">
+            <h1 class="text-5xl font-extrabold">Plan for later</h1>
+          </div>
+          <div
+            class="backgroundPart w-[50vw] rounded-lg h-[50vh] p-4 bg-[#9DCDD6] bg-[url('/images/reserve.png')] bg-contain bg-right-top bg-no-repeat"
+          >
+            <h2 class="text-4xl font-bold mb-4">
+              Get your ride right <br />
+              with Uber Reserve
+            </h2>
+            <p class="mb-4 font-semibold">Choose date and time</p>
+            <div class="flex gap-4">
+              <input
+                type="date"
+                class="p-3 rounded-md bg-white border border-gray-300 shadow-sm"
+              />
+              <select
+                class="p-3 rounded-md bg-white border border-gray-300 shadow-sm"
+              >
+                <option>Time</option>
+              </select>
+            </div>
+            <button
+              class="mt-6 px-6 py-3 w-[36%] bg-black text-white rounded-md"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col items-start ml-2 mr-64">
+          <h3 class="text-[1.3vw] font-bold mb-4">Benefits</h3>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-2">
+              <span class="material-icons mr-2"
+                ><img src="/images/calendar-filled.svg" alt="calendar"
+              /></span>
+              <p>
+                Choose your exact pickup time up to <br />
+                90 days in advance.
+              </p>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-icons mr-2"
+                ><img src="/images/anytime.svg" alt="time"
+              /></span>
+              <p>
+                Extra wait time included to meet <br />
+                your ride.
+              </p>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-icons mr-2"
+                ><img src="/images/credit_card-filled.svg" alt="credit_card"
+              /></span>
+              <p>
+                Cancel at no charge up to 60 <br />
+                minutes in advance.
+              </p>
+            </li>
+          </ul>
+          <a href="#" class="mt-4 text-zinc-700 underline">See terms</a>
+        </div>
+      </div>
+      <section class="bg-gray-100 py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+          <h2 class="text-2xl font-semibold mb-8">It’s easier in the apps</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow">
+              <div class="flex items-center space-x-4">
+                <img
+                  src="/images/Final-Download-Uber-App.jpeg"
+                  alt="Uber App QR Code"
+                  class="w-24 h-24"
+                />
+                <div class="text-left">
+                  <h3 class="text-lg font-semibold">Download the Uber app</h3>
+                  <p class="text-gray-500">Scan to download</p>
+                </div>
+                <span class="ml-auto text-2xl">→</span>
+              </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+              <div class="flex items-center space-x-4">
+                <img
+                  src="/images/QR Download.jpeg"
+                  alt="Driver App QR Code"
+                  class="w-24 h-24"
+                />
+                <div class="text-left">
+                  <h3 class="text-lg font-semibold">Download the Driver app</h3>
+                  <p class="text-gray-500">Scan to download</p>
+                </div>
+                <span class="text-2xl">→</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="bg-black text-white p-12 pl-32 h-auto">
+        <div class="flex flex-col justify-between gap-28">
+          <div>
+            <h2 class="text-2xl font-semibold mb-4">Uber</h2>
+            <a href="#" class="text-gray-400 hover:text-white"
+              >Visit Help Center</a
+            >
+          </div>
+          <div class="flex space-x-48 mb-16">
+            <div>
+              <h3 class="font-semibold mb-4">Company</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >About us</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Our offerings</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Newsroom</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Investors</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white">Blog</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white">Careers</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-4">Products</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white">Ride</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white">Drive</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white">Deliver</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white">Eat</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Uber for Business</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Uber Freight</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Gift cards</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-4">Global citizenship</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white">Safety</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Diversity and Inclusion</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Sustainability</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-4">Travel</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white">Reserve</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Airports</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white">Cities</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-8 mb-12">
+          <div class="flex space-x-20">
+            <a href="#" class="text-gray-400 hover:text-white"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-white"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-white"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-white"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-white"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="text-white-400 hover:text-white"
+              ><i class="ri-global-line"></i> English</a
+            >
+            <a href="#" class="text-white-400 hover:text-white"
+              ><i class="ri-map-pin-2-fill"></i> Bhopal</a
+            >
+          </div>
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white">
+            <img src="/images/play-store.svg" alt="Google Play" class="w-32" />
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white">
+            <img src="/images/app-store.svg" alt="App Store" class="w-32" />
+          </a>
+        </div>
+        <div class="flex space-x-[60vw] mt-12 w-full">
+          <h2 class="tag text-1xl text-gray-400 hover:text-white">
+            © 2024 Uber Technologies Inc.
+          </h2>
+          <div class="right-part flex space-x-4">
+            <h3 class="text-1xl text-gray-400 hover:text-white">Privacy</h3>
+            <h3 class="text-1xl text-gray-400 hover:text-white">
+              Accessibility
+            </h3>
+            <h3 class="text-1xl text-gray-400 hover:text-white">Terms</h3>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
